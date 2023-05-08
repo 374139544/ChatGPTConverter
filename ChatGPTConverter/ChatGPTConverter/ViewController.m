@@ -41,8 +41,8 @@
             
     }];
     
-    [CCConvertClient.shared sendQuestionToChatGPT:@"res" response:^(CCChatGPTResponse * _Nullable response, NSError * _Nullable error) {
-            
+    [CCConvertClient.shared sendQuestionToChatGPT:@"请问iOS的内存管理是采用的什么机制" response:^(CCChatGPTResponse * _Nullable response, NSError * _Nullable error) {
+        
     }];
 }
 

@@ -25,6 +25,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)configClient:(CCConvertClientConfig *)config;
 
+- (int)joinChannelByToken:(NSString * _Nullable)token
+                channelId:(NSString * _Nonnull)channelId
+                     info:(NSString * _Nullable)info
+                      uid:(NSUInteger)uid
+              joinSuccess:(void(^ _Nullable)(NSString * _Nonnull channel, NSUInteger uid, NSInteger elapsed))joinSuccessBlock;
+
 - (void)hyStart;
 - (void)hyFlush;
 - (void)hyStop;

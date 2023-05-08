@@ -51,6 +51,12 @@ typedef void(^CCChatGPTResponseBlock)(CCChatGPTResponse * _Nullable response, NS
 /// - Parameter config: 具体的配置信息
 - (void)configClient:(CCConvertClientConfig *)config;
 
+- (int)joinChannelByToken:(NSString * _Nullable)token
+                channelId:(NSString * _Nonnull)channelId
+                     info:(NSString * _Nullable)info
+                      uid:(NSUInteger)uid
+              joinSuccess:(void(^ _Nullable)(NSString * _Nonnull channel, NSUInteger uid, NSInteger elapsed))joinSuccessBlock;
+
 /// 开启语音转文字
 - (void)hyStart;
 /// 结束语音转文字

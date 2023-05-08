@@ -14,24 +14,19 @@
 		5D86C4A62A04E20600535001 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D86C4A52A04E20600535001 /* Assets.xcassets */; };
 		5D86C4A92A04E20600535001 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D86C4A72A04E20600535001 /* LaunchScreen.storyboard */; };
 		5D86C4AC2A04E20600535001 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D86C4AB2A04E20600535001 /* main.m */; };
-		5D86C51B2A04FE2900535001 /* Agoraffmpeg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D86C4F42A04ECAB00535001 /* Agoraffmpeg.framework */; };
-		5D86C51C2A04FE2900535001 /* Agoraffmpeg.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5D86C4F42A04ECAB00535001 /* Agoraffmpeg.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5D86C51F2A04FE2C00535001 /* AgoraPvcExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D86C4F32A04ECAB00535001 /* AgoraPvcExtension.framework */; };
-		5D86C5202A04FE2C00535001 /* AgoraPvcExtension.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5D86C4F32A04ECAB00535001 /* AgoraPvcExtension.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5D86C5212A04FE2E00535001 /* AgoraRtcCryptoLoader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D86C4EF2A04ECAB00535001 /* AgoraRtcCryptoLoader.framework */; };
-		5D86C5222A04FE2E00535001 /* AgoraRtcCryptoLoader.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5D86C4EF2A04ECAB00535001 /* AgoraRtcCryptoLoader.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5D86C5232A04FE3000535001 /* AgoraRtcKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D86C4F62A04ECAB00535001 /* AgoraRtcKit.framework */; };
-		5D86C5242A04FE3000535001 /* AgoraRtcKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5D86C4F62A04ECAB00535001 /* AgoraRtcKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5D86C5252A04FE3300535001 /* AgoraRtmKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D86C4F02A04ECAB00535001 /* AgoraRtmKit.framework */; };
-		5D86C5262A04FE3300535001 /* AgoraRtmKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5D86C4F02A04ECAB00535001 /* AgoraRtmKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5D86C5272A04FE3400535001 /* AgoraVideoProcessExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D86C4F12A04ECAB00535001 /* AgoraVideoProcessExtension.framework */; };
-		5D86C5282A04FE3500535001 /* AgoraVideoProcessExtension.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5D86C4F12A04ECAB00535001 /* AgoraVideoProcessExtension.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5D86C5292A04FE3700535001 /* AgoraVideoSegmentationExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D86C4F22A04ECAB00535001 /* AgoraVideoSegmentationExtension.framework */; };
-		5D86C52A2A04FE3700535001 /* AgoraVideoSegmentationExtension.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5D86C4F22A04ECAB00535001 /* AgoraVideoSegmentationExtension.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5D86C52B2A04FE3800535001 /* BeQuic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D86C4F52A04ECAB00535001 /* BeQuic.framework */; };
-		5D86C52C2A04FE3900535001 /* BeQuic.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5D86C4F52A04ECAB00535001 /* BeQuic.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5D86C5462A065BAC00535001 /* ApiKey.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5D86C5452A065BAC00535001 /* ApiKey.strings */; };
-		5D86C54F2A089D0000535001 /* AgoraHy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D86C54E2A089D0000535001 /* AgoraHy.framework */; };
+		5D86C55C2A08D31500535001 /* ConvertClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D86C55B2A08D31500535001 /* ConvertClient.framework */; };
+		5D86C55D2A08D31500535001 /* ConvertClient.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5D86C55B2A08D31500535001 /* ConvertClient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5D86C5602A08D35500535001 /* AgoraHy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D86C5532A08D0CF00535001 /* AgoraHy.framework */; };
+		5D86C5612A08D35500535001 /* AgoraHy.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5D86C5532A08D0CF00535001 /* AgoraHy.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5D86C5622A08D35700535001 /* AgoraRtcKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D86C5522A08D0CF00535001 /* AgoraRtcKit.framework */; };
+		5D86C5632A08D35700535001 /* AgoraRtcKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5D86C5522A08D0CF00535001 /* AgoraRtcKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5D86C5642A08D35900535001 /* AgoraRtmKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D86C55E2A08D33D00535001 /* AgoraRtmKit.framework */; };
+		5D86C5652A08D35900535001 /* AgoraRtmKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5D86C55E2A08D33D00535001 /* AgoraRtmKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5D86C5682A08D38C00535001 /* Agoraffmpeg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D86C5662A08D37800535001 /* Agoraffmpeg.framework */; };
+		5D86C5692A08D38C00535001 /* Agoraffmpeg.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5D86C5662A08D37800535001 /* Agoraffmpeg.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5D86C56C2A08D3B200535001 /* BeQuic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D86C56A2A08D3AE00535001 /* BeQuic.framework */; };
+		5D86C56D2A08D3B200535001 /* BeQuic.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5D86C56A2A08D3AE00535001 /* BeQuic.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,14 +53,12 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				5D86C5242A04FE3000535001 /* AgoraRtcKit.framework in Embed Frameworks */,
-				5D86C51C2A04FE2900535001 /* Agoraffmpeg.framework in Embed Frameworks */,
-				5D86C5262A04FE3300535001 /* AgoraRtmKit.framework in Embed Frameworks */,
-				5D86C5222A04FE2E00535001 /* AgoraRtcCryptoLoader.framework in Embed Frameworks */,
-				5D86C52A2A04FE3700535001 /* AgoraVideoSegmentationExtension.framework in Embed Frameworks */,
-				5D86C52C2A04FE3900535001 /* BeQuic.framework in Embed Frameworks */,
-				5D86C5282A04FE3500535001 /* AgoraVideoProcessExtension.framework in Embed Frameworks */,
-				5D86C5202A04FE2C00535001 /* AgoraPvcExtension.framework in Embed Frameworks */,
+				5D86C5632A08D35700535001 /* AgoraRtcKit.framework in Embed Frameworks */,
+				5D86C5612A08D35500535001 /* AgoraHy.framework in Embed Frameworks */,
+				5D86C5652A08D35900535001 /* AgoraRtmKit.framework in Embed Frameworks */,
+				5D86C5692A08D38C00535001 /* Agoraffmpeg.framework in Embed Frameworks */,
+				5D86C55D2A08D31500535001 /* ConvertClient.framework in Embed Frameworks */,
+				5D86C56D2A08D3B200535001 /* BeQuic.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -87,16 +80,13 @@
 		5D86C4AB2A04E20600535001 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5D86C4B12A04E20600535001 /* ChatGPTConverterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatGPTConverterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D86C4BB2A04E20600535001 /* ChatGPTConverterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatGPTConverterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5D86C4EF2A04ECAB00535001 /* AgoraRtcCryptoLoader.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AgoraRtcCryptoLoader.framework; sourceTree = "<group>"; };
-		5D86C4F02A04ECAB00535001 /* AgoraRtmKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AgoraRtmKit.framework; sourceTree = "<group>"; };
-		5D86C4F12A04ECAB00535001 /* AgoraVideoProcessExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AgoraVideoProcessExtension.framework; sourceTree = "<group>"; };
-		5D86C4F22A04ECAB00535001 /* AgoraVideoSegmentationExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AgoraVideoSegmentationExtension.framework; sourceTree = "<group>"; };
-		5D86C4F32A04ECAB00535001 /* AgoraPvcExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AgoraPvcExtension.framework; sourceTree = "<group>"; };
-		5D86C4F42A04ECAB00535001 /* Agoraffmpeg.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Agoraffmpeg.framework; sourceTree = "<group>"; };
-		5D86C4F52A04ECAB00535001 /* BeQuic.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BeQuic.framework; sourceTree = "<group>"; };
-		5D86C4F62A04ECAB00535001 /* AgoraRtcKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AgoraRtcKit.framework; sourceTree = "<group>"; };
 		5D86C5452A065BAC00535001 /* ApiKey.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = ApiKey.strings; sourceTree = "<group>"; };
-		5D86C54E2A089D0000535001 /* AgoraHy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AgoraHy.framework; sourceTree = "<group>"; };
+		5D86C5522A08D0CF00535001 /* AgoraRtcKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AgoraRtcKit.framework; sourceTree = "<group>"; };
+		5D86C5532A08D0CF00535001 /* AgoraHy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AgoraHy.framework; sourceTree = "<group>"; };
+		5D86C55B2A08D31500535001 /* ConvertClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ConvertClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D86C55E2A08D33D00535001 /* AgoraRtmKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AgoraRtmKit.framework; sourceTree = "<group>"; };
+		5D86C5662A08D37800535001 /* Agoraffmpeg.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Agoraffmpeg.framework; sourceTree = "<group>"; };
+		5D86C56A2A08D3AE00535001 /* BeQuic.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BeQuic.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,15 +94,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D86C5212A04FE2E00535001 /* AgoraRtcCryptoLoader.framework in Frameworks */,
-				5D86C5232A04FE3000535001 /* AgoraRtcKit.framework in Frameworks */,
-				5D86C54F2A089D0000535001 /* AgoraHy.framework in Frameworks */,
-				5D86C5252A04FE3300535001 /* AgoraRtmKit.framework in Frameworks */,
-				5D86C52B2A04FE3800535001 /* BeQuic.framework in Frameworks */,
-				5D86C51B2A04FE2900535001 /* Agoraffmpeg.framework in Frameworks */,
-				5D86C5292A04FE3700535001 /* AgoraVideoSegmentationExtension.framework in Frameworks */,
-				5D86C51F2A04FE2C00535001 /* AgoraPvcExtension.framework in Frameworks */,
-				5D86C5272A04FE3400535001 /* AgoraVideoProcessExtension.framework in Frameworks */,
+				5D86C5622A08D35700535001 /* AgoraRtcKit.framework in Frameworks */,
+				5D86C5602A08D35500535001 /* AgoraHy.framework in Frameworks */,
+				5D86C5642A08D35900535001 /* AgoraRtmKit.framework in Frameworks */,
+				5D86C5682A08D38C00535001 /* Agoraffmpeg.framework in Frameworks */,
+				5D86C55C2A08D31500535001 /* ConvertClient.framework in Frameworks */,
+				5D86C56C2A08D3B200535001 /* BeQuic.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,10 +123,9 @@
 		5D86C48D2A04E20300535001 = {
 			isa = PBXGroup;
 			children = (
-				5D86C4EE2A04ECAB00535001 /* frameworks */,
 				5D86C4982A04E20300535001 /* ChatGPTConverter */,
 				5D86C4972A04E20300535001 /* Products */,
-				5D86C50C2A04EF9C00535001 /* Frameworks */,
+				5D86C55A2A08D31500535001 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -156,6 +142,7 @@
 		5D86C4982A04E20300535001 /* ChatGPTConverter */ = {
 			isa = PBXGroup;
 			children = (
+				5D86C5512A08D0CF00535001 /* frameworks */,
 				5D86C4992A04E20300535001 /* AppDelegate.h */,
 				5D86C49A2A04E20300535001 /* AppDelegate.m */,
 				5D86C49C2A04E20300535001 /* SceneDelegate.h */,
@@ -172,26 +159,22 @@
 			path = ChatGPTConverter;
 			sourceTree = "<group>";
 		};
-		5D86C4EE2A04ECAB00535001 /* frameworks */ = {
+		5D86C5512A08D0CF00535001 /* frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5D86C54E2A089D0000535001 /* AgoraHy.framework */,
-				5D86C4EF2A04ECAB00535001 /* AgoraRtcCryptoLoader.framework */,
-				5D86C4F02A04ECAB00535001 /* AgoraRtmKit.framework */,
-				5D86C4F12A04ECAB00535001 /* AgoraVideoProcessExtension.framework */,
-				5D86C4F22A04ECAB00535001 /* AgoraVideoSegmentationExtension.framework */,
-				5D86C4F32A04ECAB00535001 /* AgoraPvcExtension.framework */,
-				5D86C4F42A04ECAB00535001 /* Agoraffmpeg.framework */,
-				5D86C4F52A04ECAB00535001 /* BeQuic.framework */,
-				5D86C4F62A04ECAB00535001 /* AgoraRtcKit.framework */,
+				5D86C56A2A08D3AE00535001 /* BeQuic.framework */,
+				5D86C5662A08D37800535001 /* Agoraffmpeg.framework */,
+				5D86C5522A08D0CF00535001 /* AgoraRtcKit.framework */,
+				5D86C55E2A08D33D00535001 /* AgoraRtmKit.framework */,
+				5D86C5532A08D0CF00535001 /* AgoraHy.framework */,
 			);
-			name = frameworks;
-			path = ChatGPTConverter/frameworks;
+			path = frameworks;
 			sourceTree = "<group>";
 		};
-		5D86C50C2A04EF9C00535001 /* Frameworks */ = {
+		5D86C55A2A08D31500535001 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5D86C55B2A08D31500535001 /* ConvertClient.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

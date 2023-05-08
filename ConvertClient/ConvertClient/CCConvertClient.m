@@ -36,6 +36,11 @@ static CCConvertClient *shareClient;
     CCVoice2TextManager.shared.delegate = self;
 }
 
+- (int)joinChannelByToken:(NSString *)token channelId:(NSString *)channelId info:(NSString *)info uid:(NSUInteger)uid joinSuccess:(void (^)(NSString * _Nonnull, NSUInteger, NSInteger))joinSuccessBlock
+{
+    return [CCVoice2TextManager.shared joinChannelByToken:token channelId:channelId info:info uid:uid joinSuccess:joinSuccessBlock];
+}
+
 - (void)hyStart
 {
     [CCVoice2TextManager.shared hyStart];

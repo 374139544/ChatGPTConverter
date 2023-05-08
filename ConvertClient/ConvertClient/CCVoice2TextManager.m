@@ -58,13 +58,22 @@ static NSString *ExtensionName = @"IstIts";
         NSLog(@"enable local audio %d", v);
     }
     
-    int v2 = [self.agoraKit joinChannelByToken:nil channelId:@"agora_extension" info:nil uid:0 joinSuccess:^(NSString *channel, NSUInteger uid, NSInteger elapsed) {
+    _isInit = YES;
+}
+
+- (int)joinChannelByToken:(NSString *)token channelId:(NSString *)channelId info:(NSString *)info uid:(NSUInteger)uid joinSuccess:(void (^)(NSString * _Nonnull, NSUInteger, NSInteger))joinSuccessBlock
+{
+    return [self.agoraKit joinChannelByToken:token channelId:channelId info:info uid:uid joinSuccess:joinSuccessBlock];
+}
+
+- (void)joinChannel:(NSString *)channelId
+{
+    int v2 = [self.agoraKit joinChannelByToken:nil channelId:channelId info:nil uid:0 joinSuccess:^(NSString *channel, NSUInteger uid, NSInteger elapsed) {
         // Join channel "demoChannel1"
     }];
     if (_config.debug) {
         NSLog(@"join channel %d", v2);
     }
-    _isInit = YES;
 }
 
 - (void)hyStart

@@ -37,6 +37,9 @@
     
     CCConvertClient.shared.delegate = self;
     
+    [CCConvertClient.shared joinChannelByToken:nil channelId:@"agora_extension" info:nil uid:0 joinSuccess:^(NSString * _Nonnull channel, NSUInteger uid, NSInteger elapsed) {
+            
+    }];
     
     [CCConvertClient.shared sendQuestionToChatGPT:@"res" response:^(CCChatGPTResponse * _Nullable response, NSError * _Nullable error) {
             

@@ -14,9 +14,6 @@
 		5D86C4A62A04E20600535001 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D86C4A52A04E20600535001 /* Assets.xcassets */; };
 		5D86C4A92A04E20600535001 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D86C4A72A04E20600535001 /* LaunchScreen.storyboard */; };
 		5D86C4AC2A04E20600535001 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D86C4AB2A04E20600535001 /* main.m */; };
-		5D86C4B62A04E20600535001 /* ChatGPTConverterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D86C4B52A04E20600535001 /* ChatGPTConverterTests.m */; };
-		5D86C4C02A04E20600535001 /* ChatGPTConverterUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D86C4BF2A04E20600535001 /* ChatGPTConverterUITests.m */; };
-		5D86C4C22A04E20600535001 /* ChatGPTConverterUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D86C4C12A04E20600535001 /* ChatGPTConverterUITestsLaunchTests.m */; };
 		5D86C51B2A04FE2900535001 /* Agoraffmpeg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D86C4F42A04ECAB00535001 /* Agoraffmpeg.framework */; };
 		5D86C51C2A04FE2900535001 /* Agoraffmpeg.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5D86C4F42A04ECAB00535001 /* Agoraffmpeg.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5D86C51F2A04FE2C00535001 /* AgoraPvcExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D86C4F32A04ECAB00535001 /* AgoraPvcExtension.framework */; };
@@ -89,10 +86,7 @@
 		5D86C4AA2A04E20600535001 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D86C4AB2A04E20600535001 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5D86C4B12A04E20600535001 /* ChatGPTConverterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatGPTConverterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5D86C4B52A04E20600535001 /* ChatGPTConverterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatGPTConverterTests.m; sourceTree = "<group>"; };
 		5D86C4BB2A04E20600535001 /* ChatGPTConverterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatGPTConverterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5D86C4BF2A04E20600535001 /* ChatGPTConverterUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatGPTConverterUITests.m; sourceTree = "<group>"; };
-		5D86C4C12A04E20600535001 /* ChatGPTConverterUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatGPTConverterUITestsLaunchTests.m; sourceTree = "<group>"; };
 		5D86C4EF2A04ECAB00535001 /* AgoraRtcCryptoLoader.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AgoraRtcCryptoLoader.framework; sourceTree = "<group>"; };
 		5D86C4F02A04ECAB00535001 /* AgoraRtmKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AgoraRtmKit.framework; sourceTree = "<group>"; };
 		5D86C4F12A04ECAB00535001 /* AgoraVideoProcessExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AgoraVideoProcessExtension.framework; sourceTree = "<group>"; };
@@ -144,8 +138,6 @@
 			children = (
 				5D86C4EE2A04ECAB00535001 /* frameworks */,
 				5D86C4982A04E20300535001 /* ChatGPTConverter */,
-				5D86C4B42A04E20600535001 /* ChatGPTConverterTests */,
-				5D86C4BE2A04E20600535001 /* ChatGPTConverterUITests */,
 				5D86C4972A04E20300535001 /* Products */,
 				5D86C50C2A04EF9C00535001 /* Frameworks */,
 			);
@@ -178,23 +170,6 @@
 				5D86C5452A065BAC00535001 /* ApiKey.strings */,
 			);
 			path = ChatGPTConverter;
-			sourceTree = "<group>";
-		};
-		5D86C4B42A04E20600535001 /* ChatGPTConverterTests */ = {
-			isa = PBXGroup;
-			children = (
-				5D86C4B52A04E20600535001 /* ChatGPTConverterTests.m */,
-			);
-			path = ChatGPTConverterTests;
-			sourceTree = "<group>";
-		};
-		5D86C4BE2A04E20600535001 /* ChatGPTConverterUITests */ = {
-			isa = PBXGroup;
-			children = (
-				5D86C4BF2A04E20600535001 /* ChatGPTConverterUITests.m */,
-				5D86C4C12A04E20600535001 /* ChatGPTConverterUITestsLaunchTests.m */,
-			);
-			path = ChatGPTConverterUITests;
 			sourceTree = "<group>";
 		};
 		5D86C4EE2A04ECAB00535001 /* frameworks */ = {
@@ -364,7 +339,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D86C4B62A04E20600535001 /* ChatGPTConverterTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,8 +346,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D86C4C02A04E20600535001 /* ChatGPTConverterUITests.m in Sources */,
-				5D86C4C22A04E20600535001 /* ChatGPTConverterUITestsLaunchTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

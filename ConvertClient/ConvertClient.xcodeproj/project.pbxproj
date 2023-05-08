@@ -18,6 +18,8 @@
 		5D86C53C2A062C2600535001 /* CCChatGPTResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D86C53A2A062C2600535001 /* CCChatGPTResponse.m */; };
 		5D86C53F2A06421400535001 /* CCVoice2TextManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D86C53D2A06421400535001 /* CCVoice2TextManager.h */; };
 		5D86C5402A06421400535001 /* CCVoice2TextManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D86C53E2A06421400535001 /* CCVoice2TextManager.m */; };
+		5D86C5702A09077C00535001 /* CCChatGPTMessageList.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D86C56E2A09077C00535001 /* CCChatGPTMessageList.h */; };
+		5D86C5712A09077C00535001 /* CCChatGPTMessageList.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D86C56F2A09077C00535001 /* CCChatGPTMessageList.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		5D86C53A2A062C2600535001 /* CCChatGPTResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCChatGPTResponse.m; sourceTree = "<group>"; };
 		5D86C53D2A06421400535001 /* CCVoice2TextManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCVoice2TextManager.h; sourceTree = "<group>"; };
 		5D86C53E2A06421400535001 /* CCVoice2TextManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCVoice2TextManager.m; sourceTree = "<group>"; };
+		5D86C56E2A09077C00535001 /* CCChatGPTMessageList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCChatGPTMessageList.h; sourceTree = "<group>"; };
+		5D86C56F2A09077C00535001 /* CCChatGPTMessageList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCChatGPTMessageList.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +80,8 @@
 				5D86C53A2A062C2600535001 /* CCChatGPTResponse.m */,
 				5D86C53D2A06421400535001 /* CCVoice2TextManager.h */,
 				5D86C53E2A06421400535001 /* CCVoice2TextManager.m */,
+				5D86C56E2A09077C00535001 /* CCChatGPTMessageList.h */,
+				5D86C56F2A09077C00535001 /* CCChatGPTMessageList.m */,
 			);
 			path = ConvertClient;
 			sourceTree = "<group>";
@@ -87,6 +93,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D86C5702A09077C00535001 /* CCChatGPTMessageList.h in Headers */,
 				5D86C52F2A05FE8F00535001 /* CCChatGPTManager.h in Headers */,
 				5D86C4DC2A04E28000535001 /* ConvertClient.h in Headers */,
 				5D86C53B2A062C2600535001 /* CCChatGPTResponse.h in Headers */,
@@ -168,6 +175,7 @@
 				5D86C4EB2A04E3E500535001 /* CCConvertClient.m in Sources */,
 				5D86C5382A0600D900535001 /* CCChatGPTMessage.m in Sources */,
 				5D86C5302A05FE8F00535001 /* CCChatGPTManager.m in Sources */,
+				5D86C5712A09077C00535001 /* CCChatGPTMessageList.m in Sources */,
 				5D86C5402A06421400535001 /* CCVoice2TextManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

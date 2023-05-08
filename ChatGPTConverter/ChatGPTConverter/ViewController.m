@@ -31,13 +31,13 @@
     config.hyApiKey = dict[@"hyApiKey"];
     config.hyApiSecret = dict[@"hyApiSecret"];
     config.chatGPTApiUrl = dict[@"chatGPTApiUrl"];
-    config.autoQuestioning = YES;
     config.debug = YES;
+    [CCConvertClient.shared setSystem:@"你是一名程序员"];
     [CCConvertClient.shared configClient:config];
     
     CCConvertClient.shared.delegate = self;
-    
-    [CCConvertClient.shared joinChannelByToken:nil channelId:@"agora_extension" info:nil uid:0 joinSuccess:^(NSString * _Nonnull channel, NSUInteger uid, NSInteger elapsed) {
+    CCConvertClient.shared.autoQuestioning = YES;
+    [CCConvertClient.shared.agoraKit joinChannelByToken:nil channelId:@"agora_extension" info:nil uid:0 joinSuccess:^(NSString * _Nonnull channel, NSUInteger uid, NSInteger elapsed) {
             
     }];
     

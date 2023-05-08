@@ -5,8 +5,8 @@
 //  Created by 冯钊 on 2023/5/6.
 //
 
-#import <ConvertClient/CCChatGPTResponse.h>
-#import <ConvertClient/CCChatGPTMessage.h>
+#import "CCChatGPTResponse.h"
+#import "CCChatGPTMessage.h"
 #import "CCConvertClient.h"
 
 NS_ASSUME_NONNULL_BEGIN

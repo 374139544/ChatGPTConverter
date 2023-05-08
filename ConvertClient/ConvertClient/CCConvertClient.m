@@ -8,6 +8,7 @@
 #import "CCConvertClient.h"
 #import "CCChatGPTManager.h"
 #import "CCVoice2TextManager.h"
+#import "CCChatGPTResponse.h"
 
 static CCConvertClient *shareClient;
 
@@ -36,9 +37,9 @@ static CCConvertClient *shareClient;
     CCVoice2TextManager.shared.delegate = self;
 }
 
-- (int)joinChannelByToken:(NSString *)token channelId:(NSString *)channelId info:(NSString *)info uid:(NSUInteger)uid joinSuccess:(void (^)(NSString * _Nonnull, NSUInteger, NSInteger))joinSuccessBlock
+- (AgoraRtcEngineKit *)agoraKit
 {
-    return [CCVoice2TextManager.shared joinChannelByToken:token channelId:channelId info:info uid:uid joinSuccess:joinSuccessBlock];
+    return CCVoice2TextManager.shared.agoraKit;
 }
 
 - (void)hyStart
@@ -56,7 +57,7 @@ static CCConvertClient *shareClient;
     [CCVoice2TextManager.shared hyStop];
 }
 
-- (void)appendSystemMessage:(NSString *)content
+- (void)setSystem:(NSString *)content
 {
     [CCChatGPTManager.shared appendSystemMessage:content];
 }
@@ -71,7 +72,7 @@ static CCConvertClient *shareClient;
     if ([_delegate respondsToSelector:@selector(cc_converClientVoice2TextOnResult:subEnd:)]) {
         [_delegate cc_converClientVoice2TextOnResult:result subEnd:subEnd];
     }
-    if (_config.autoQuestioning && subEnd) {
+    if (_autoQuestioning && subEnd) {
         __weak typeof(self) weakSelf = self;
         [self sendQuestionToChatGPT:result response:^(CCChatGPTResponse * _Nullable response, NSError * _Nullable error) {
             if ([weakSelf.delegate respondsToSelector:@selector(cc_converClientOnChatGPTAnswer:error:)]) {

@@ -6,9 +6,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <ConvertClient/CCChatGPTResponse.h>
+#import <AgoraRtcKit/AgoraRtcKit.h>
 
-@class CCConvertClientConfig;
+@class CCConvertClientConfig, CCChatGPTResponse;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -46,16 +46,14 @@ typedef void(^CCChatGPTResponseBlock)(CCChatGPTResponse * _Nullable response, NS
 @property (class, readonly) CCConvertClient *shared;
 /// CCConvertClient事件的代理对象
 @property (nonatomic, weak) id<CCConvertClientDelegate> delegate;
+/// AgoraEngine实例
+@property (readonly, nullable) AgoraRtcEngineKit *agoraKit;
+/// 语音转文字后是否直接向ChatGPT提问
+@property (nonatomic, assign) BOOL autoQuestioning;
 
 /// 配置CCConvertClient SDK
 /// - Parameter config: 具体的配置信息
 - (void)configClient:(CCConvertClientConfig *)config;
-
-- (int)joinChannelByToken:(NSString * _Nullable)token
-                channelId:(NSString * _Nonnull)channelId
-                     info:(NSString * _Nullable)info
-                      uid:(NSUInteger)uid
-              joinSuccess:(void(^ _Nullable)(NSString * _Nonnull channel, NSUInteger uid, NSInteger elapsed))joinSuccessBlock;
 
 /// 开启语音转文字
 - (void)hyStart;
@@ -66,7 +64,7 @@ typedef void(^CCChatGPTResponseBlock)(CCChatGPTResponse * _Nullable response, NS
 
 /// 设置请求chatgpt的系统system预设，注意会清除掉以前的记忆
 /// - Parameter content: 内容
-- (void)appendSystemMessage:(NSString *)content;
+- (void)setSystem:(NSString *)content;
 
 /// 问chatgpt问题
 /// - Parameters:
@@ -90,9 +88,6 @@ typedef void(^CCChatGPTResponseBlock)(CCChatGPTResponse * _Nullable response, NS
 @property (nonatomic, copy) NSString *hyApiSecret;
 /// chatGPT接口地址
 @property (nonatomic, copy) NSString *chatGPTApiUrl;
-
-/// 语音转文字后是否直接向ChatGPT提问
-@property (nonatomic, assign) BOOL autoQuestioning;
 /// ChatGPT上下文缓存的最大消息数量
 @property (nonatomic, assign) NSUInteger limitChatMessageCount;
 /// 是否是调试模式，调试模式会打印额外的日志

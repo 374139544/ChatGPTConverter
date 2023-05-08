@@ -6,6 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <AgoraRtcKit/AgoraRtcKit.h>
 #import "CCConvertClient.h"
 
 NS_ASSUME_NONNULL_BEGIN
@@ -22,14 +23,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (class, readonly) CCVoice2TextManager *shared;
 @property (nonatomic, weak) id<CCVoice2TextManagerDelegate> delegate;
+@property (readonly) AgoraRtcEngineKit *agoraKit;
 
 - (void)configClient:(CCConvertClientConfig *)config;
-
-- (int)joinChannelByToken:(NSString * _Nullable)token
-                channelId:(NSString * _Nonnull)channelId
-                     info:(NSString * _Nullable)info
-                      uid:(NSUInteger)uid
-              joinSuccess:(void(^ _Nullable)(NSString * _Nonnull channel, NSUInteger uid, NSInteger elapsed))joinSuccessBlock;
 
 - (void)hyStart;
 - (void)hyFlush;

@@ -6,6 +6,7 @@
 //
 
 #import "CCChatGPTManager.h"
+#import "CCChatGPTMessageList.h"
 
 const CCChatGPTModel CCChatGPTModel_35 = @"gpt-3.5-turbo";
 const CCChatGPTModel CCChatGPTModel_40 = @"gpt-4";
@@ -18,7 +19,7 @@ static NSString *CCChatGPTRoleAssistant = @"assistant";
 
 @property (nonatomic, strong) CCConvertClientConfig *config;
 @property (nonatomic, strong) NSMutableDictionary <NSNumber *, CCChatGPTResponseBlock>*requestDictionary;
-@property (nonatomic, strong) NSMutableArray <CCChatGPTMessage *>*messages;
+@property (nonatomic, strong) CCChatGPTMessageList *messageList;
 @property (nonatomic, strong) NSURLSession *session;
 
 @end
@@ -40,7 +41,7 @@ static NSString *CCChatGPTRoleAssistant = @"assistant";
     if (self = [super init]) {
         _model = CCChatGPTModel_35;
         _requestDictionary = [NSMutableDictionary dictionary];
-        _messages = [NSMutableArray array];
+        _messageList = [[CCChatGPTMessageList alloc] init];
         _session = [NSURLSession sessionWithConfiguration:NSURLSessionConfiguration.defaultSessionConfiguration delegate:self delegateQueue:NSOperationQueue.mainQueue];
     }
     return self;
@@ -49,6 +50,7 @@ static NSString *CCChatGPTRoleAssistant = @"assistant";
 - (void)configClient:(CCConvertClientConfig *)config
 {
     _config = config;
+    _messageList.limitCount = _config.limitChatMessageCount;
 }
 
 - (void)appendSystemMessage:(NSString *)content
@@ -56,8 +58,7 @@ static NSString *CCChatGPTRoleAssistant = @"assistant";
     CCChatGPTMessage *message = [[CCChatGPTMessage alloc] init];
     message.role = CCChatGPTRoleSystem;
     message.content = content;
-    [_messages addObject:message];
-    [self removeHistoryMessage];
+    [_messageList setSystem:message];
 }
 
 - (void)sendQuestionToChatGPT:(NSString *)question response:(CCChatGPTResponseBlock)response
@@ -69,8 +70,7 @@ static NSString *CCChatGPTRoleAssistant = @"assistant";
     CCChatGPTMessage *message = [[CCChatGPTMessage alloc] init];
     message.role = CCChatGPTRoleUser;
     message.content = question;
-    [_messages addObject:message];
-    [self removeHistoryMessage];
+    [_messageList appendMessage:message];
     
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
     request.HTTPMethod = @"POST";
@@ -81,7 +81,7 @@ static NSString *CCChatGPTRoleAssistant = @"assistant";
     request.URL = [NSURL URLWithString:_config.chatGPTApiUrl];
     
     NSMutableArray *messages = [NSMutableArray array];
-    for (CCChatGPTMessage *message in _messages) {
+    for (CCChatGPTMessage *message in _messageList.messages) {
         [messages addObject:@{
             @"role": message.role,
             @"content": message.content
@@ -99,16 +99,9 @@ static NSString *CCChatGPTRoleAssistant = @"assistant";
     });
 }
 
-- (void)removeHistoryMessage
-{
-    if (_messages.count > _config.limitChatMessageCount) {
-        [_messages removeObjectsInRange:NSMakeRange(0, _messages.count - _config.limitChatMessageCount)];
-    }
-}
-
 - (NSArray *)messages
 {
-    return [NSArray arrayWithArray:_messages];
+    return _messageList.messages;
 }
 
 - (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveData:(NSData *)data
@@ -138,8 +131,7 @@ static NSString *CCChatGPTRoleAssistant = @"assistant";
         CCChatGPTMessage *message = [[CCChatGPTMessage alloc] init];
         message.content = response.answer;
         message.role = CCChatGPTRoleAssistant;
-        [_messages addObject:message];
-        [self removeHistoryMessage];
+        [_messageList appendMessage:message];
         
         if (_requestDictionary[@(dataTask.taskIdentifier)]) {
             _requestDictionary[@(dataTask.taskIdentifier)](response, nil);

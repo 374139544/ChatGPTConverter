@@ -6,7 +6,6 @@
 //
 
 #import "CCVoice2TextManager.h"
-#import <AgoraRtcKit/AgoraRtcKit.h>
 
 static NSString *VendorName = @"Hy";
 static NSString *ExtensionName = @"IstIts";
@@ -49,31 +48,15 @@ static NSString *ExtensionName = @"IstIts";
     cfg.eventDelegate = self;
     _agoraKit = [AgoraRtcEngineKit sharedEngineWithConfig:cfg delegate:self];
     [_agoraKit enableExtensionWithVendor:VendorName extension:ExtensionName enabled:YES];
-    [self.agoraKit setExtensionProviderPropertyWithVendor:@"Hy" key:@"log_lvl" value:@"4"];
 
-    [self.agoraKit setChannelProfile:AgoraChannelProfileLiveBroadcasting];
-    [self.agoraKit setClientRole:AgoraClientRoleBroadcaster];
+    [_agoraKit setChannelProfile:AgoraChannelProfileLiveBroadcasting];
+    [_agoraKit setClientRole:AgoraClientRoleBroadcaster];
     int v = [_agoraKit enableLocalAudio:YES];
     if (_config.debug) {
         NSLog(@"enable local audio %d", v);
     }
     
     _isInit = YES;
-}
-
-- (int)joinChannelByToken:(NSString *)token channelId:(NSString *)channelId info:(NSString *)info uid:(NSUInteger)uid joinSuccess:(void (^)(NSString * _Nonnull, NSUInteger, NSInteger))joinSuccessBlock
-{
-    return [self.agoraKit joinChannelByToken:token channelId:channelId info:info uid:uid joinSuccess:joinSuccessBlock];
-}
-
-- (void)joinChannel:(NSString *)channelId
-{
-    int v2 = [self.agoraKit joinChannelByToken:nil channelId:channelId info:nil uid:0 joinSuccess:^(NSString *channel, NSUInteger uid, NSInteger elapsed) {
-        // Join channel "demoChannel1"
-    }];
-    if (_config.debug) {
-        NSLog(@"join channel %d", v2);
-    }
 }
 
 - (void)hyStart
